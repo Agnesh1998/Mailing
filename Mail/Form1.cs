@@ -21,29 +21,25 @@ namespace Mail
         private void button1_Click(object sender, EventArgs e)
         {
 
-            MailMessage msg = new MailMessage("brijeshdungrani303@gmail.com", txtTo.Text, txtSubjext.Text, txtMessage.Text);
+            MailMessage msg = new MailMessage("godhaniagnesh@gmail.com", txtTo.Text, txtSubjext.Text, txtMessage.Text);
             msg.IsBodyHtml = true;
             SmtpClient sc = new SmtpClient("smtp.gmail.com",587);
             sc.UseDefaultCredentials = false;
-            NetworkCredential cre = new NetworkCredential("brijeshdungrani303@gmail.com",txtPass.Text);
+            NetworkCredential cre = new NetworkCredential("godhaniagnesh@gmail.com",txtPass.Text);
             sc.Credentials = cre;
             sc.EnableSsl = true;
             sc.Send(msg);
             MessageBox.Show("SEND");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
            
                 MailMessage mail = new MailMessage();
               //  mail.To.Add(email);
-                mail.To.Add("brijeshdungrani303@gmail.com");
-                mail.From = new MailAddress("brijeshdungrani303@gmail.com");
+                mail.To.Add("godhaniagnesh@gmail.com");
+                mail.From = new MailAddress("godhaniagnesh@gmail.com");
                 mail.Subject = "sub";
 
                 mail.Body = "<h1>hello</h1>";
@@ -52,7 +48,7 @@ namespace Mail
                 SmtpClient smtp = new SmtpClient();
                 smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
                 smtp.Credentials = new System.Net.NetworkCredential
-                     ("brijeshdungrani303@gmail.com", ""); // ***use valid credentials***
+                     ("godhaniagnesh@gmail.com", ""); // ***use valid credentials***
                 smtp.Port = 587;
 
                 //Or your Smtp Email ID and Password
